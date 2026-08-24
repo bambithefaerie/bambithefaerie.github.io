@@ -1,88 +1,132 @@
 <!doctype html>
-<html lang="en">file:///Users/bambithecatuwu/Downloads/index.html
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>bambithefaerie</title>
-<meta name="description" content="grounded magic — manifestation, theta healing, and success without self-abandonment.">
+<meta name="description" content="For curious minds, creative lives & a little grounded magic.">
 <meta property="og:title" content="bambithefaerie">
-<meta property="og:description" content="grounded magic — manifestation, theta healing, and success without self-abandonment.">
+<meta property="og:description" content="For curious minds, creative lives & a little grounded magic.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#FBF6F0">
+<meta name="theme-color" content="#1E3326">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
-    --cream:#FBF6F0; --ink:#3A322E; --ink-soft:#7B6E66;
-    --line:rgba(58,50,46,.13); --card:rgba(255,255,255,.58); --card-hover:rgba(255,255,255,.92);
-    --blush:#F3DCD4; --lilac:#E4DCEE; --gold:#C9A227;
+    --green:#1E3326;
+    --green-lift:#25402F;
+    --gold:#C4A44D;
+    --gold-soft:rgba(196,164,77,.72);
+    --gold-line:rgba(196,164,77,.28);
+    --card:rgba(196,164,77,.055);
+    --card-hover:rgba(196,164,77,.115);
   }
   html{-webkit-text-size-adjust:100%}
   body{
-    min-height:100svh; background:var(--cream); color:var(--ink);
-    font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight:300;
-    display:flex; justify-content:center;
+    min-height:100svh;
+    background:var(--green);
+    color:var(--gold);
+    font-family:'Alice',Georgia,serif;
+    display:flex;justify-content:center;
     padding:clamp(2.5rem,9vw,4.5rem) 1.35rem clamp(3rem,10vw,5rem);
-    position:relative; overflow-x:hidden;
+    position:relative;overflow-x:hidden;
   }
-  body::before{
-    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  body::after{
+    content:"";position:fixed;inset:0;z-index:3;pointer-events:none;
     background:
-      radial-gradient(58% 42% at 18% 6%, var(--blush) 0%, transparent 62%),
-      radial-gradient(52% 40% at 88% 24%, var(--lilac) 0%, transparent 60%),
-      radial-gradient(70% 45% at 50% 104%, #EFE4D8 0%, transparent 70%);
-    opacity:.85;
+      radial-gradient(60% 40% at 20% 4%, rgba(196,164,77,.11) 0%, transparent 62%),
+      radial-gradient(52% 38% at 86% 22%, rgba(196,164,77,.075) 0%, transparent 60%),
+      radial-gradient(75% 48% at 50% 105%, var(--green-lift) 0%, transparent 72%);
   }
   .dust{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
   .dust i{
-    position:absolute;display:block;width:3px;height:3px;border-radius:50%;background:#fff;
-    box-shadow:0 0 6px 1px rgba(255,255,255,.9), 0 0 14px 3px rgba(201,162,39,.18);
+    position:absolute;display:block;width:3px;height:3px;border-radius:50%;
+    background:#EBE6DD;
+    box-shadow:0 0 6px 1px rgba(235,230,221,.55), 0 0 16px 4px rgba(196,164,77,.42);
     opacity:0;animation:drift linear infinite;
   }
   @keyframes drift{
     0%{transform:translateY(14vh) scale(.6);opacity:0}
-    12%{opacity:.85} 80%{opacity:.5}
+    12%{opacity:.9} 80%{opacity:.45}
     100%{transform:translateY(-95vh) scale(1.1);opacity:0}
   }
   main{position:relative;z-index:1;width:100%;max-width:26.5rem;text-align:center}
-  .avatar{
-    width:clamp(6.5rem,26vw,7.75rem);aspect-ratio:1;margin:0 auto 1.5rem;border-radius:50%;
-    background:linear-gradient(150deg,var(--blush),var(--lilac));
-    border:1px solid rgba(255,255,255,.85);
-    box-shadow:0 12px 34px -14px rgba(58,50,46,.32), 0 0 0 7px rgba(255,255,255,.42);
-    object-fit:cover;display:grid;place-items:center;
-    font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:rgba(255,255,255,.95);
+
+  .hero{
+    width:min(25rem,108%);margin:0 auto -.4rem;
   }
-  h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.15rem,9.5vw,2.7rem);letter-spacing:.005em;line-height:1.05}
-  .tagline{margin-top:.85rem;font-size:.815rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft);line-height:1.85}
-  .intro{margin-top:1.05rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.12rem;line-height:1.55;color:var(--ink-soft)}
-  .rule{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:2rem 0 1.6rem;color:var(--gold)}
-  .rule::before,.rule::after{content:"";height:1px;flex:1;background:var(--line)}
-  .rule span{font-size:.7rem;letter-spacing:.3em}
+  .hero img{width:100%;height:auto;display:block}
+  h1{
+    font-family:'Alice',Georgia,serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(1.5rem,6.1vw,1.92rem);
+    letter-spacing:.135em;
+    line-height:1.25;
+    color:var(--gold);
+  }
+  .tagline{
+    margin-top:1rem;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.28rem,5.4vw,1.5rem);
+    line-height:1.4;
+    color:var(--gold);
+  }
+  .intro{
+    margin-top:1.15rem;
+    font-family:'Alice',Georgia,serif;
+    font-size:.925rem;
+    line-height:1.72;
+    color:var(--gold-soft);
+  }
+
+  .rule{display:flex;align-items:center;justify-content:center;gap:.8rem;margin:2.1rem 0 1.65rem;color:var(--gold)}
+  .rule::before,.rule::after{content:"";height:1px;flex:1;background:var(--gold-line)}
+  .rule span{font-size:.72rem;letter-spacing:.3em}
+
   nav{display:flex;flex-direction:column;gap:.72rem}
   a.link{
-    display:flex;align-items:center;gap:.95rem;padding:1.02rem 1.25rem;
-    border:1px solid var(--line);border-radius:1.05rem;background:var(--card);
-    -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
-    color:var(--ink);text-decoration:none;font-size:.945rem;letter-spacing:.055em;
+    display:flex;align-items:center;gap:.95rem;
+    padding:1.02rem 1.25rem;
+    border:1px solid var(--gold-line);
+    border-radius:1.05rem;
+    background:var(--card);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    color:var(--gold);text-decoration:none;
+    font-family:'Cinzel',serif;
+    font-size:.9rem;font-weight:500;letter-spacing:.075em;
     transition:transform .28s cubic-bezier(.2,.8,.3,1), background .28s ease, box-shadow .28s ease, border-color .28s ease;
-    box-shadow:0 1px 2px rgba(58,50,46,.04);
   }
   a.link:hover,a.link:focus-visible{
-    transform:translateY(-2px);background:var(--card-hover);
-    border-color:rgba(201,162,39,.42);box-shadow:0 14px 28px -16px rgba(58,50,46,.38);outline:none;
+    transform:translateY(-2px);
+    background:var(--card-hover);
+    border-color:rgba(196,164,77,.62);
+    box-shadow:0 16px 30px -18px #000, 0 0 22px -8px rgba(196,164,77,.35);
+    outline:none;
   }
-  a.link svg{width:1.18rem;height:1.18rem;flex:none;color:var(--ink-soft);transition:color .28s ease}
+  a.link svg{width:1.18rem;height:1.18rem;flex:none;color:var(--gold-soft);transition:color .28s ease}
   a.link:hover svg{color:var(--gold)}
-  .label{flex:1;text-align:left}
-  .sub{font-size:.735rem;letter-spacing:.11em;color:var(--ink-soft);text-transform:uppercase}
-  .arrow{opacity:.35;font-size:.9rem;transition:transform .28s ease,opacity .28s ease}
-  a.link:hover .arrow{opacity:.75;transform:translateX(3px)}
-  a.link.soon{pointer-events:none;background:transparent;border-style:dashed;color:var(--ink-soft)}
+  .label{flex:1;text-align:left;line-height:1.3}
+  .sub{
+    display:block;margin-top:.15rem;
+    font-family:'Alice',Georgia,serif;
+    font-size:.79rem;letter-spacing:.055em;color:var(--gold-soft);text-transform:none;
+  }
+  .arrow{opacity:.45;font-size:.9rem;transition:transform .28s ease,opacity .28s ease}
+  a.link:hover .arrow{opacity:.9;transform:translateX(3px)}
+  a.link.soon{pointer-events:none;background:transparent;border-style:dashed;opacity:.62}
   a.link.soon .arrow{display:none}
-  footer{margin-top:2.6rem;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);opacity:.72}
+
+  footer{
+    margin-top:2.7rem;
+    font-family:'Cinzel',serif;
+    font-size:.66rem;letter-spacing:.26em;color:var(--gold-soft);opacity:.8;
+  }
+
   @media (prefers-reduced-motion:reduce){
     .dust{display:none} a.link{transition:none} a.link:hover{transform:none}
   }
@@ -90,40 +134,50 @@
 </head>
 <body>
 <div class="dust" id="dust" aria-hidden="true"></div>
+
 <main>
-  <div class="avatar" aria-hidden="true">b</div>
+  <div class="hero"><img src="me-blend.jpg" alt="Rodina Raluca-Mara"></div>
+
   <h1>bambithefaerie</h1>
-  <p class="tagline">grounded magic</p>
-  <p class="intro">Manifestation, theta healing, and building a life that does not ask you to abandon yourself.</p>
+  <p class="tagline">Make a life out of your curiosity.</p>
+  <p class="intro">For curious minds, creative lives &amp; a little grounded magic.</p>
+
   <div class="rule"><span>&#10022;</span></div>
+
   <nav>
     <a class="link" href="https://instagram.com/bambithefaerie" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.05" fill="currentColor" stroke="none"/></svg>
-      <span class="label">Instagram<br><span class="sub">@bambithefaerie</span></span>
+      <span class="label">Instagram<span class="sub">@bambithefaerie</span></span>
       <span class="arrow">&#8594;</span>
     </a>
+
     <a class="link" href="https://www.tiktok.com/@bambithefaerie" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M14.4 3v11.6a3.7 3.7 0 1 1-3.1-3.65"/><path d="M14.4 3c.35 2.5 1.9 4 4.4 4.25"/></svg>
-      <span class="label">TikTok<br><span class="sub">@bambithefaerie</span></span>
+      <span class="label">TikTok<span class="sub">@bambithefaerie</span></span>
       <span class="arrow">&#8594;</span>
     </a>
+
     <a class="link" href="https://www.youtube.com/@bambithefaerie" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="2.2" y="5" width="19.6" height="14" rx="4.4"/><path d="M10.2 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
-      <span class="label">YouTube<br><span class="sub">@bambithefaerie</span></span>
+      <span class="label">YouTube<span class="sub">@bambithefaerie</span></span>
       <span class="arrow">&#8594;</span>
     </a>
-    <a class="link" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">
+
+    <a class="link" href="https://www.linkedin.com/in/raluca-rodina-b53655155" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="3.4"/><path d="M7 10.4v6.4M7 7.2v.02"/><path d="M11.6 16.8v-6.4M11.6 13.1c0-1.5.9-2.5 2.4-2.5s2.4 1 2.4 2.5v3.7"/></svg>
-      <span class="label">LinkedIn<br><span class="sub">Raluca Maras</span></span>
+      <span class="label">LinkedIn<span class="sub">Rodina Raluca-Mara</span></span>
       <span class="arrow">&#8594;</span>
     </a>
+
     <a class="link soon" href="#">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.5 2.6 3.7 5.8 3.7 9.2s-1.2 6.6-3.7 9.2c-2.5-2.6-3.7-5.8-3.7-9.2S9.5 5.4 12 2.8z"/></svg>
-      <span class="label">Website<br><span class="sub">coming soon</span></span>
+      <span class="label">Website<span class="sub">coming soon</span></span>
     </a>
   </nav>
+
   <footer>Cluj-Napoca &#183; Romania</footer>
 </main>
+
 <script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
